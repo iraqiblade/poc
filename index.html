@@ -1,5 +1,11 @@
 <html>
-  <body>
-    <script>alert("XSS Found by Habib - University of Hail");</script>
-  </body>
+    <head><title>PoC by Habib</title></head>
+    <body>
+        <h1 id="status">Testing JS...</h1>
+        <script>
+            // إذا اشتغل الجافا سكريبت، النص راح يتغير فوراً
+            document.getElementById('status').innerHTML = '<h1>XSS EXECUTED BY HABIB</h1>';
+            document.body.style.backgroundColor = 'red'; // يخلي الشاشة حمراء
+        </script>
+    </body>
 </html>
